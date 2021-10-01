@@ -5,20 +5,9 @@ you run this file.
 
 
 def print_list(items):
-    """Print each item in the input list.
-    
-    For example::
-    
-        >>> print_list([1, 2, 6, 3, 9])
-        1
-        2
-        6
-        3
-        9
-    """
 
-    print("the wrong thing")
-
+    for item in items:
+        print(item)
 
 def long_words(words):
     """Return words in input list that longer than 4 characters.
@@ -36,9 +25,8 @@ def long_words(words):
         >>> long_words(["all", "are", "tiny"])
         []
     """
-
-    return ['the wrong thing']
-
+    long_words = [word for word in words if len(word) > 4]
+    return long_words
 
 def n_long_words(words, n):
     """Return words in list longer than `n` characters.
@@ -53,8 +41,8 @@ def n_long_words(words, n):
         >>> n_long_words(["I", "like", "apples", "bananas", "you"], 5)
         ['apples', 'bananas']
     """
-
-    return ['the wrong thing']
+    long_words = [word for word in words if len(word) > n]
+    return long_words
 
 
 def smallest_int(numbers):
@@ -73,8 +61,13 @@ def smallest_int(numbers):
         >>> smallest_int([]) is None
         True
     """
-
-    return 100
+    smallest_number = numbers[0]
+    for number in numbers:
+        if number < smallest_number:
+            smallest_number = number
+    return smallest_number
+    
+    return smallest_number
 
 
 def largest_int(numbers):
@@ -94,7 +87,11 @@ def largest_int(numbers):
         True
     """
 
-    return 0
+    largest_number = numbers[0]
+    for number in numbers:
+        if number > largest_number:
+            largest_number = number
+    return largest_number
 
 
 def halvesies(numbers):
