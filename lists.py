@@ -67,7 +67,7 @@ def smallest_int(numbers):
             smallest_number = number
     return smallest_number
     
-    return smallest_number
+    
 
 
 def largest_int(numbers):
@@ -109,7 +109,8 @@ def halvesies(numbers):
         [0.5, 2.5]
     """
 
-    return []
+    halvesies = [(num/2) for num in numbers]
+    return halvesies
 
 
 def word_lengths(words):
@@ -120,8 +121,9 @@ def word_lengths(words):
         >>> word_lengths(["hello", "hey", "hello", "spam"])
         [5, 3, 5, 4]
     """
-
-    return []
+    word_len = [len(word) for word in words]
+    return word_len
+    
 
 
 def sum_numbers(numbers):
@@ -139,8 +141,11 @@ def sum_numbers(numbers):
         >>> sum_numbers([])
         0
     """
+    sum_num = 0
+    for number in numbers:
+        sum_num += number
 
-    return None
+    return sum_num
 
 
 def mult_numbers(numbers):
