@@ -108,17 +108,27 @@ def print_sign(num):
 # 6. Write a function called 'is_divisible_by_three' that takes an integer and
 #    returns a boolean (True or False), depending on whether the number is
 #    evenly divisible by 3.
-
+def is_divisible_by_three(num):
+    return num % 3 == 0
 
 # 7. Write a function called 'num_spaces' that takes a sentence as one string
 #    and returns the number of spaces.
+def num_spaces(sentence):
+    counter = 0
+    for character in sentence:
+        if character == ' ':
+            counter += 1
+    return counter
 
 
 # 8. Write a function called 'total_meal_price' that can be passed a meal price
 #    and a tip percentage. It should return the total amount paid
 #    (price + price * tip). **However:** passing in the tip percentage should
 #    be optional; if not given, it should default to 15%.
-
+def total_meal_price(meal_price, tip_percentage = 0.15):
+    tax = meal_price * tip_percentage
+    total_price = meal_price + tax
+    return total_price
 
 # 9. Write a function called 'sign_and_parity' that takes an integer as an
 #    argument and returns two pieces of information as strings --- "Positive"
@@ -128,6 +138,19 @@ def print_sign(num):
 #    Then, write code that shows the calling of this function on a number and
 #    unpack what is returned into two variables --- sign and parity (whether
 #    it's even or odd). Print sign and parity.
+def sign_and_parity(num):
+    descriptors = []
+    if num > 0:
+        descriptors.append('Positive')
+    else:
+        descriptors.append('Negative')
+    if num % 2 == 0:
+        descriptors.append('Even')
+    else:
+        descriptors.append('Odd')
+
+    sign, parity = descriptors
+    print([sign, parity])
 
 
 ###############################################################################
