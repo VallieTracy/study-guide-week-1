@@ -167,8 +167,12 @@ def mult_numbers(numbers):
         >>> mult_numbers([])
         1
     """
+    product = 1
+    for num in numbers:
+        new_product = num * product
+        product = new_product
 
-    return None
+    return product
 
 
 def join_strings(words):
@@ -186,8 +190,10 @@ def join_strings(words):
         >>> join_strings([])
         ''
     """
-
-    return "Not the right thing"
+    new_string = ''
+    for word in words:
+        new_string += word
+    return new_string
 
 
 def average(numbers):
@@ -209,7 +215,9 @@ def average(numbers):
     a feel free to provide a good solution here.)
     """
 
-    return 0
+    add = sum(numbers)
+    ave = add/len(numbers)
+    return ave
 
 
 def join_strings_with_comma(words):
