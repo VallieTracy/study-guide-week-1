@@ -70,23 +70,39 @@ PART TWO:
 
 # 1. Write a function called 'hello_world' that does not take any arguments and
 #    prints "Hello World".
-
+def hello_world():
+    print("Hello World")
 
 # 2. Write a function called 'say_hi' that takes a name as a string and
 #    prints "Hi" followed by the name.
+def say_hi(str):
+    print(f"Hi {str}")
 
 
 # 3. Write a function called 'print_product' that takes two integers and
 #    multiplies them together. Print the result.
+def print_product(num1, num2):
+    product = num1 * num2
+    print(product)
 
 
 # 4. Write a function called 'repeat_string' that takes a string and an integer
 #    and prints the string that many times
+def repeat_string(str, num):
+    result = str * num
+    print(result)
 
 
 # 5. Write a function called 'print_sign' that takes an integer and prints
 #    "Higher than 0" if higher than zero and "Lower than 0" if lower than zero.
 #    If the integer is zero, print "Zero".
+def print_sign(num):
+    if num > 0:
+        print("Higher than 0")
+    elif num < 0:
+        print("Lower than 0")
+    else:
+        print("Zero")
 
 
 # 6. Write a function called 'is_divisible_by_three' that takes an integer and
